@@ -1,5 +1,4 @@
-from random import randint
-
+import random
 import pygame
 
 SCREEN_WIDTH, SCREEN_HEIGHT = 640, 480
@@ -52,8 +51,8 @@ class Apple(GameObject):
         """Установка случайной позиции яблока."""
         while True:
             new_position = (
-                randint(0, GRID_WIDTH - 1) * GRID_SIZE,
-                randint(0, GRID_HEIGHT - 1) * GRID_SIZE
+                random.randint(0, GRID_WIDTH - 1) * GRID_SIZE,
+                random.randint(0, GRID_HEIGHT - 1) * GRID_SIZE
             )
             if new_position not in snake_positions:
                 self.position = new_position
